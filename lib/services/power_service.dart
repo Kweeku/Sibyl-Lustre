@@ -19,7 +19,7 @@ Future<Sunshine> fetchData(
     Uri.parse(
         '${Constants.baseUrl}/daily/${Constants.midUrl}&longitude=${positionData.longitude}&latitude=${positionData.latitude}&start=$startDate&end=$endDate&format=JSON'),
   );
-  print(response.request);
+  // print(response.request);
   // Use the compute function to run parseJson in a separate isolate.
   return compute(parseJson, response.body);
 }

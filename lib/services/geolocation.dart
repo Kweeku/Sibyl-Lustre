@@ -46,7 +46,7 @@ class UserLocation {
   Future<Address> getAddressFromLatLong(Position position) async {
     List<Placemark> placeMarks =
         await placemarkFromCoordinates(position.latitude, position.longitude);
-    print(placeMarks);
+    // print(placeMarks);
     Placemark place = placeMarks[0];
     return Address(
       street: place.street!,
